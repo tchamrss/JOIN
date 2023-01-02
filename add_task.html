@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/join_logo.png">
+    <link rel="stylesheet" href="./assets/stylessheets/addTask.css">
+    <link rel="stylesheet" href="./assets/stylessheets/footer.css">
+    <script src="js/scripte.js"></script>
+    <script src="js/addTask.js"></script>
+    <script src="js/desktop_template.js"></script>
+    <script src="js/mini_backend.js"> </script>
+    
+</head>
+<body onload="includeHTML(); init();">
+
+     <!-- Include Templates  -->
+
+     <div w3-include-html="assets/templates/desktop_template.html"></div>
+    
+     <div class="kanban">
+        <span class="kanban-child"> Kanban Project Management </span>
+    </div>
+    
+    <div id="wrapper" class="addTask">
+        <form id="form" onsubmit="addTask('todo'); return false;">
+        <div class="left-box">
+            <!--Title-->
+
+                <input class="title" id="title" type="text" required placeholder="Enter a title">
+
+
+            <!--Select Contacts-->
+              
+            <div class="selectContacts"   >
+                <!-- <div class="input_select_contacts">
+                    <input id="selectContacts"  type="text" readonly="readonly" required placeholder="Select contacts to assign" >
+                    <img src="assets/img/dropdown_arrow.png" onclick="showContact()">
+                </div> -->
+
+                <div id="userNewParent" class="input_select_contacts">
+                    <input id="userNew" name="userName" type="text" readonly="true" required placeholder="Select contacts to assign" >
+                    <img id="userNewImg0" src="assets/img/dropdown_arrow.png" onclick="showContact()">
+                    <img id="userNewImg1" class="d-none styleImg" src="assets/img/cancelBlue.png" onclick="cancelAddNewUser()">
+                    <img id="userNewImg2" class="d-none styleImg" src="assets/img/separation.png">
+                    <img id="userNewImg3" class="d-none styleImg" src="assets/img/checkBlue.png" onclick="checkAddNewUser()">
+                </div>
+        
+                <div id="selectAll" class="selectAll" style="display:none ;"> </div> 
+        
+                   
+            </div>
+            
+
+
+            <!--Due Date-->
+
+                <span>Due date</span>
+                <div class="dueDate"  onkeyup="showDate()"  >
+                <input id="dueDate" minlength="10" maxlength="10" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" type="date" required >
+                <!-- <img src="assets/img/calendar-event.png" onclick="showDateToday()"> -->
+            </div>
+
+            
+            
+           
+        
+            <!--CategoryNew-->
+            <span class="margin-top">Category</span>
+            <div class="selectContacts"   >
+                <div id="categoryNewParent" class="input_select_contacts">
+                    <input id="categoryNew" name="categoryName" type="text" readonly="true" required placeholder="Select Task category" >
+                    <img id="categoryNewImg0" src="assets/img/dropdown_arrow.png" onclick="showCategory()">
+                    <img id="categoryNewImg1" class="d-none styleImg" src="assets/img/cancelBlue.png" onclick="cancelAddNewCategory()">
+                    <img id="categoryNewImg2" class="d-none styleImg" src="assets/img/separation.png">
+                    <img id="categoryNewImg3" class="d-none styleImg" src="assets/img/checkBlue.png" onclick="checkAddNewCategory()">
+                </div>
+        
+                <div id="categoryAll" class="selectAll" style="display: none"> </div> 
+        
+                   
+            </div>
+            
+            <!--Priority-->
+
+            <div class="priority">
+
+                <button id="button_prio_high" onclick="clickPriority ('high')" value="high" type="button"  class="b1">Urgent <img id="imgPrioHigh" src="assets/img/red_arrow.png"></button> 
+
+                <button id="button_prio_middle" onclick="clickPriority ('middle')" value="middle" type="button" class="b2">Medium <img id="imgPrioMiddle" src="assets/img/medium.png"></button>
+
+                <button id="button_prio_low" onclick="clickPriority ('low') " value="low" type="button"  class="b3">Low <img id="imgPrioLow" src="assets/img/green_arrow.png"></button>
+
+            </div>   
+             
+
+            <!--Description-->
+                
+                <span>Description</span>
+
+                <textarea required class="description"  type="text"
+                
+                id="description"  placeholder="Enter a description..">
+
+                </textarea>
+
+        </div>
+            <!--Add Task Button Confirm-->
+        <div class="right-box">
+            <div class="buttonConfirm">
+
+                <Button type="button" onclick="resetTask()" class="buttonClear">Clear <img style="height: 12px;" src="/assets/img/closeX.png" alt=""></Button>
+
+                <Button  type="submit" value="Submit" class="buttonCreateTask">Create Task <img style="height: 12px;" src="/assets/img/arrow.png" alt=""></Button>
+
+        </div>
+
+        </div>
+        </form>
+        <div class="showCreateTask d-none" id="showCreateTask">Task added to board</div>
+      
+
+    </div>
+    <div id="footerAddTask" w3-include-html="footer.html"></div>
+</body>
+</html>

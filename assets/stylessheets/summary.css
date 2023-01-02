@@ -1,0 +1,1005 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans';
+    height: 100%;
+}
+
+/* ----------Start Style summary----------------------- */
+#greeting {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 22px;
+    position: absolute;
+    /* width: 650px; */
+    height: 77px;
+    left: 500px;
+    top: 150px;
+    /* justify-content: space-around; */
+}
+
+#greeting span{
+    
+    font-weight:300;
+    font-size: 42px;
+    line-height: 76.8px;
+    
+}
+#greet{
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 76.8px;
+    color: #4589FF;;
+}
+
+#dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+    position: absolute;
+    /* width: 925px; */
+    /* height: 445px; */
+    left: 367px;
+    top: 300px;
+}
+
+#dashboard-child1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 35px;
+    flex-wrap: wrap;
+    width: 100%;
+    /* width: 925px; */
+    /* height: 191px; */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#dashboard-child11{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 22.5px 4px;
+    gap: 35px;
+     width: 600px;
+    /*height: 191px; */
+    /* Version 2/main color */
+    background: #4589FF;
+    /* nuevo */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    transition: transform .2s; /* Animation */
+}
+
+#dashboard-child11:hover .urgent-text {  
+    color: #4589FF;
+}
+
+#dashboard-child11:hover #urgentTasksNumber {
+    color: #4589FF;
+}
+
+#dashboard-child11:hover #urgent-date {
+    color: #4589FF;
+}
+
+#dashboard-child11:hover #date-text {
+    color: #4589FF;
+}
+
+#dashboard-child11:hover #strich_summary {
+    background-color: #4589FF;
+    
+}
+
+#dashboard-child11:hover {
+    transform: scale(1.04) !important;  
+    background: #FFFFFF;
+    border-radius: 0px 20px 20px  20px;
+}
+
+#dashboard-child11:hover > #urgent-dashboard  {  
+    border-right: solid 4px  #4589FF;
+}
+
+/* #dashboard-child1:hover #dashboard-child12{
+    transform: scale(0.9);  
+      
+} */
+
+
+#dashboard-child12{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    /* width: unset; */
+    /* height: 191px; */
+    /* Versio 2 main color */
+    background: #D2E3FF;
+    /* nuevo */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+
+    /* Inside auto layout */
+    transition: transform .2s; /* Animation */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#dashboard-child12:hover{
+    transform: scale(1.1) !important;  
+    background: #FFFFFF;
+    border-radius: 0px 20px 20px  20px;
+}
+
+/* #dashboard-child11:hover #dashboard{ 
+    transform: scale(0.87);  
+    
+} */
+    
+/* 
+#dashboard:hover #dashboard-child12{ 
+    transform: scale(0.87);  
+    
+}
+
+#dashboard:hover #dashboard-child11{ 
+    transform: scale(0.87);  
+    
+}
+
+#dashboard:hover #dashboard-child21{ 
+    transform: scale(0.87);  
+    
+}
+
+#dashboard:hover #dashboard-child22{ 
+    transform: scale(0.87);  
+    
+}
+
+#dashboard:hover #dashboard-child23{ 
+    transform: scale(0.87);  
+    
+}
+
+#dashboard:hover #dashboard-child24{ 
+    transform: scale(0.87);  
+    
+}
+ */
+#dashboard-child12:hover #todosTasksNumber {
+    color: #4589FF;
+}
+
+/* #dashboard-child12:hover ~ #dashboard-child11{
+    width: 108px;
+    height: 91px; 
+      
+} */
+
+#dashboard-child2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 35px;
+    flex-wrap: wrap;
+    /* width: 921px; */
+    /* height: 219px; */
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#dashboard-child21{
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    /* width: 204px;
+    height: 219px; */
+    /* white */
+    background: #FFFFFF;
+    /* nuevo */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+     transition: transform .2s; /* Animation  */
+  
+}
+
+#dashboard-child21:hover{
+    transform: scale(1.1) !important;  
+    background: #4589FF;
+    border-radius: 0px 20px 20px  20px;
+}
+
+#dashboard-child21:hover #board-text {
+    color: #FFFFFF;
+}
+
+#dashboard-child21:hover #boardTasksNumber {
+    color: #FFFFFF;
+}
+
+#dashboard-child21:hover #board-img {
+    background-color: #FFFFFF;;
+    border-radius: 100%;
+    
+}
+
+#dashboard-child22{
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+   /*  width: 204px;
+    height: 219px; */
+    /* white */
+    background: #FFFFFF;
+    /* nuevo */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+     transition: transform .2s; /* Animation */
+  
+}
+
+#dashboard-child22:hover{
+    transform: scale(1.1)  !important;  
+    background: #4589FF;
+    border-radius: 0px 20px 20px  20px;
+}
+
+#dashboard-child22:hover #progress-text {
+    color: #FFFFFF;
+}
+
+#dashboard-child22:hover #progressTasksNumber {
+    color: #FFFFFF;
+}
+
+#dashboard-child22:hover #progress-img {
+    background-color: #FFFFFF;
+    border-radius: 100%;
+}
+
+#dashboard-child23{
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    /* width: 204px;
+    height: 219px; */
+    /* white */
+    background: #FFFFFF;
+    /* nuevo */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+     transition: transform .2s;  /* Animation */
+}
+
+#dashboard-child23:hover{
+    transform: scale(1.1)  !important;  
+    background: #4589FF;
+    border-radius: 0px 20px 20px  20px;
+}
+
+#dashboard-child23:hover #feedback-text {
+    color: #FFFFFF;
+}
+
+#dashboard-child23:hover #feedbackTasksNumber {
+    color: #FFFFFF;
+}
+
+#dashboard-child23:hover #feedback-img {
+    background-color: #FFFFFF;
+    border-radius: 100%;
+}
+
+#dashboard-child24{
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    /* width: 204px;
+    height: 219px; */
+    /* white */
+    background: #FFFFFF;
+    /* nuevo */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    /* Inside auto layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0; 
+     transition: transform .2s;  /* Animation */
+}
+
+#dashboard-child24:hover{
+    transform: scale(1.1)  !important;  
+    background: #4589FF;
+    border-radius: 0px 20px 20px  20px;
+}
+
+#dashboard-child24:hover #done-text {
+    color: #FFFFFF;
+}
+
+#dashboard-child24:hover #doneTasksNumber {
+    color: #FFFFFF;
+}
+
+
+#dashboard-child24:hover #done-img {
+    background-color: #FFFFFF;
+    border-radius: 100%;
+}
+
+
+#urgent-dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 9px;
+    width: 140px;
+    height: 113px;
+    border-right: solid 4px white;
+    padding-right: 30px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#urgent-img{
+    width: 76px;
+    height: 76px;
+
+   /*  background: url(urgent.png); */
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+
+}
+
+#urgentTasksNumber{
+    width: 28px;
+    height: 58px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    /* identical to box height, or 58px */
+    /* white */
+    color: #FFFFFF;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.urgent-text{
+    /* width: 140px;
+    height: 28px; */
+    /* Version 2/t5 */
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    /* identical to box height, or 28px */
+    /* white */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+}
+
+#urgent-dashboard-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    /* width: 124px;
+    height: 76px; */
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+#urgent-dashboard-child2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 13px;
+    /* width: 274px;
+    height: 81px; */
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+#urgent-date{
+    /* width: 274px;
+    height: 40px; */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 120%;
+    /* identical to box height, or 40px */
+    /* white */
+
+    color: #FFFFFF;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#date-text{
+   /*  width: 211px;
+    height: 28px; */
+
+    /* Version 2/t5 */
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    /* identical to box height, or 28px */
+    /* white */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#todos-img{
+    width: 76px;
+    height: 76px;
+
+    /* background: url(Board.png); */
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+#todosTasksNumber{
+    width: 28px;
+    height: 58px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    /* identical to box height, or 58px */
+    text-align: center;
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#todos-text{
+    /* width: 128px;
+    height: 28px; */
+    /* Version 2/t5 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    /* identical to box height, or 28px */
+    text-align: center;
+    /* Version 2/main color */
+    color: #4589FF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#todos-dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    top: 40px;
+    left: 40px;
+    gap: 7px;
+    /* width: 128px;
+    height: 111px; */
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#todos-dashboard-child{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    left: 2px ;
+    width: 124px;
+    height: 80px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+
+.dashboard-child2x{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;  
+    width: 124px;
+    height: 76px;
+    /* Inside auto layout */  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.dashboard-child2-all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 7px;
+    width: 124px;
+    height: 139px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+} 
+
+#board-text{
+    width: 94px;
+    height: 56px;
+    /* Version 2/t5 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    /* or 28px */
+    text-align: center;
+    /* Version 2/main color */
+    color: #4589FF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#progress-text{
+    width: 94px;
+    height: 56px;
+    /* Version 2/t5 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    /* or 28px */
+    text-align: center;
+    /* Version 2/main color */
+    color: #4589FF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#feedback-text{
+    width: 102px;
+    height: 56px;
+    /* Version 2/t5 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    /* or 28px */
+    text-align: center;
+    /* Version 2/main color */
+    color: #4589FF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#done-text{
+    width: 66px;
+    height: 56px;
+    /* Version 2/t5 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    /* or 28px */
+    text-align: center;
+    /* Version 2/main color */
+    color: #4589FF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.tasksNumber{
+    width: 28px;
+    height: 58px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    /* identical to box height, or 58px */
+    text-align: center;
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.onscroll-class{
+    max-height: calc(100vh - 100px);
+    overflow-y: scroll;
+}
+
+#footerSummary{
+    display: none;
+}
+
+.kanban{
+    display: none;
+}
+
+
+@media screen and (max-width: 1081px) {
+
+    #wrapper{
+        display: flex;
+        padding-right: 10px;
+        padding-left: 10px;
+        max-width: calc(100% - 20px);
+        justify-content: center;
+        padding-bottom: 150px;
+        
+    }
+
+    .kanban{
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;flex-wrap: wrap;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-weight: 700;
+        color: #4589FF;
+    }
+
+    .headline {
+        display: none;
+    }
+
+    #dashboard-child12 {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    #todos-dashboard {
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .sidebar{
+        display: none !important;
+      }
+
+      #dashboard-child11 {
+        padding: 4px 0px;
+        width: 100%;
+    }
+
+    #footerSummary{
+        display: block;
+    }
+    #dashboard {
+        position: unset;
+        left: unset;
+        top: 155px;
+    }
+
+    #greeting {
+        display: none;
+        left: unset;
+        padding: 20px;
+
+    }
+
+    #urgent-dashboard-child {
+        width: unset;
+        align-items: unset;
+    }
+
+    #urgent-dashboard-child2 {
+        width: unset;
+    }
+
+    #urgent-dashboard {
+        width: unset;
+    }
+
+    #dashboard-child2 {
+        justify-content: space-between;
+        gap: 18px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    #dashboard-child11 {
+        gap: 10px;
+        padding: 4px 0px;
+    }
+
+    .header {
+        height: 80px !important;
+    }
+
+    #dashboard-child2 {
+        gap: 14px;
+    }
+    #dashboard-child1 {
+        gap: 10px;
+    }
+
+    #dashboard {
+        gap: 15px;
+    }
+
+    .dashboard-child2x {
+        padding: 0px;
+        gap: 20px;
+        width: unset; 
+        height: unset; 
+    }
+
+    #todos-dashboard-child {
+        width: unset;
+    }
+
+    #dashboard-child21 {
+        padding: 10px;
+    }
+    #dashboard-child22 {
+        padding: 10px;
+    }
+
+    #dashboard-child23 {
+        padding: 10px;
+    }
+
+    #dashboard-child24 {
+        padding: 10px;
+    }
+
+    #dashboard-child12 {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .urgent-text {
+        width: unset;
+        font-size: 15px;
+    }
+
+    #urgent-date {
+        width: unset;
+        font-size: 23px;
+    }
+
+    #date-text {
+        width: unset;
+        font-size: 15px;
+    }
+
+    #urgent-img {
+        width: 42px;
+        height: 42px;
+
+    }
+
+    #todosTasksNumber {
+        padding-top: 23px;
+        width: unset;
+        font-size: 28px;
+    }
+
+    #urgentTasksNumber {
+        width: unset;
+        height: unset;
+        padding-top: 2px;
+        font-size: 28px;
+    }
+
+    #todos-text {
+        width: unset;
+        font-size: 15px;
+    }
+
+    #todos-img {
+        padding-top: 10px;
+        width: 52px;
+        height: 52px;
+    }
+
+    #board-text {
+        width: unset;
+        font-size: 15px;
+    }
+
+    #board-img {
+        width: 52px;
+        height: 52px;
+    }
+
+    #progress-text {
+        width: unset;
+        font-size: 15px;
+    }
+
+    #progress-img {
+        width: 52px;
+        height: 52px;
+    }
+
+    #feedback-text {
+        width: unset;
+        font-size: 15px;
+    }
+
+    #feedback-img {
+        width: 52px;
+        height: 52px;
+    }
+
+    #done-text {
+        width: unset;
+        font-size: 15px;
+    }
+
+    #done-img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .tasksNumber {
+        width: unset;
+        font-size: 28px;
+        padding-top: 25px;
+    }
+
+}
+
+@media screen and (max-width: 332px) {
+    #urgent-date {
+        font-size: 15px;
+    }
+
+    #date-text {
+        font-size: 10px;
+    }
+
+    .urgent-text {
+        font-size: 10px;
+    }
+
+    #dashboard-child2 {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dashboard-child2-all {
+        gap: 7px;
+        width: 100px;
+        height: 100px;
+    }
+
+    
+}
+/* ----------End Style summary----------------------- */

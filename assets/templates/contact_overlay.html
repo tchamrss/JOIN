@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Overlay</title>
+    <link rel="stylesheet" href="../../assets/fonts.css">
+    <link rel="stylesheet" href="../../assets/stylessheets/contact_overlay.css">
+    <script src="/js/scripte.js"></script>
+    <script src="/js/contacts.js"></script>
+    <script src="/js/mini_backend.js"></script>
+    
+</head>
+<body>
+
+    <div>
+        <div id="overlayContact" class="overlay">
+
+            <div id="overlayContent" class="content d-none">
+                <img src="/assets/img/join-logo-white.png" alt="">
+                <h1 id="contactOverlayTitle">Add Contact</h1>
+                <span>Tasks are better with a team!</span>
+            </div>
+            <img id="closeContact" class="d-none" onclick="closeNewContact()"  src="/assets/img/cancel.png" alt="">
+            <img id="closeContactEdit" class="d-none" onclick="closeNewContact()"  src="/assets/img/CloseWhite.png" alt="">
+            <div class="contacts-edit">
+                <div id="shortNameCont">                   
+                </div>
+
+                <form id="form"  onsubmit="newContact();closeNewContact(); return false;">
+                    <div class="input-content">
+                        <div  class="input-name">
+                            <input id="newContact-name" required placeholder="Name" class="input-name-child" type="name">
+                            <img  src="/assets/img/name.png" alt="">
+                        </div>
+
+                        <div class="input-email">
+                            <input id="newContact-email" required placeholder="E-mail" class="input-email-child" type="email">
+                            <img src="/assets/img/umschlag.png" alt="">
+                        </div>
+
+                        <div class="input-phone">
+                            <input id="newContact-phone" placeholder="Phone" required class="input-phone-child" name="phone" type="number" pattern=".{10,10}" inputmode="numeric">
+                            <img src="/assets/img/phone.png" alt="">
+                        </div>
+
+                        <div id="buttons"  class="buttons">
+                            <button onclick="closeNewContact(); return false;" class="btn-one">Cancel <img style="height: 12px;" src="/assets/img/closeX.png" alt=""> </button>
+                            <button value="submit" type="submit" class="btn-two">Create contact <img style="height: 12px;" src="/assets/img/arrow.png" alt=""></button>
+                        </div>
+
+                        <div id="btn-save" class="d-none">
+                            <button id="btn-save-child" class="button-contact" onclick="saveContact()" >Save</button>
+                        </div>
+
+                    </div>
+                </form> 
+                
+                <!-- <div class="buttons"> -->
+                    <!-- <button class="btn-one">Cancel <img style="height: 12px;" src="/assets/img/closeX.png" alt=""> </button> -->
+                   
+                    <!-- <button onclick="closeNewContact()" class="btn-one">Cancel <img style="height: 12px;" src="/assets/img/closeX.png" alt=""> </button> -->
+
+                <!-- </div> -->
+                
+
+            </div>
+
+            <!-- <div class="buttons">
+                <button onclick="closeNewContact()" class="btn-one">Cancel <img style="height: 12px;" src="/assets/img/closeX.png" alt=""> </button>
+                <button class="btn-two">Create contact <img style="height: 12px;" src="/assets/img/arrow.png" alt=""></button>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+</html>

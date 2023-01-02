@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop_Template</title>
+    <!-- <link rel="stylesheet" href="../assets/stylessheets/desktop_template.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/fonts.css"> -->
+    <link rel="stylesheet" href="../../assets/fonts.css">
+    <link rel="stylesheet" href="../../assets/stylessheets/desktop_template.css">
+    <script src="js/board.js"></script>
+    <script src="js/desktop_template.js"></script>
+  
+</head>
+<body>
+
+
+    <div class="header">
+
+        <div class="header-left">
+            <img src="/assets/img/join-logo-white.png" alt="">
+        </div>
+
+        <div class="header-right">
+            <div class="headline">Kanban Project Management Tool</div>
+             <a href="help.html"><img src="/assets/img/fragezeichen.png" alt=""></a>
+            <img id="myBtn" onclick="logoutWindow()" class="header-profile" src="/assets/img/profile-dummy.png" alt="">
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+              </div>
+              <div onclick="window.location.href ='../../login.html'" class="modal-body">
+                <p>Log Out</p>
+              </div>
+              <div class="modal-footer">
+                <h3>Modal Footer</h3>
+              </div>
+            </div>
+          
+          </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="icons">
+            <div class="icons-style" onclick="window.location.href ='../../summary.html'">
+                <img src="/assets/img/summary_icon.png" alt=""> <a href="../../summary.html">Summary </a> 
+            </div>
+                
+            <div class="icons-style" onclick="window.location.href ='../../board.html'">
+                <img src="/assets/img/board_icon.png" alt=""> <a href="../../board.html">Board </a> 
+            </div>
+
+            <div class="icons-style" onclick="window.location.href ='../../add_task.html'">
+                <img src="/assets/img/addtask_icon.png" alt=""> <a href="../../add_task.html">Add-Task </a> 
+            </div> 
+
+            <div class="icons-style" onclick="window.location.href ='../../contacts.html'">
+                <img src="/assets/img/contact_icon.png" alt=""> <a href="../../contacts.html">Contacts </a> 
+            </div>
+
+            <!-- <div id="deleteTrash" style="padding-top: 10px;" class="trash-style" ondrop="moveTo('toDelete');removehighlight()" ondragover="allowDrop(event);highlight('deleteTrash')">
+                <img src="/assets/img/biggarbagebin_121980.png" alt=""> Delete Task 
+            </div> -->
+        </div>
+
+
+        <div class="legal-notice">
+            <div id="imprint" class="flex-items" onclick="window.location.href ='../../imprint.html'">
+                <img src="/assets/img/info.png" alt=""> <a 
+                href="../../imprint.html"> Imprint </a>
+            </div>
+
+            <div id="legalNote" class="flex-items" onclick="window.location.href ='../../legal_notice.html'">
+                <img src="/assets/img/info.png" alt=""> <a 
+                href="../../legal_notice.html"> Legal Notice </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="main">
+        MAIN CONTENT GOES HERE 
+    </div> -->
+    
+</body>
+</html>

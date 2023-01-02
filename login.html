@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/fonts.css" />
+    <link rel="stylesheet" href="./assets/stylessheets/login.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/join_logo.png">
+    <title>Log in</title>
+   <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+    --> <script src="js/login.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <!-- <script> setURL(' https://russell-tchamba.developerakademie.net/smallest_backend_ever') </script> -->
+  </head>
+  <body onload="init()">
+    <div id="regionAll">
+      <!-- <div id="login-overlay" class="login-overlay"></div> -->
+      <img
+       id="join-logo"
+       class="join-logo-animation"
+       src="./assets/img/join_logo.png"
+       alt=""
+     />
+    <div class="login-container">
+      <div id="login-content">
+      <div id="login-body">
+        <div id="login-form">
+          <div id="login-title">
+            <span id="login-title-text"> Log in</span>
+            <img id="login-title-img" src="./assets/img/underline.png" alt="" />
+          </div>
+          <form
+            onsubmit="loginUser(); return false;"
+            class="input-content"
+            action=""
+          >
+            <div class="input-content">
+              <div id="inputEmail">
+                <!-- <div id="inputEmail-child"> -->
+                <input
+                  placeholder="Email"
+                  id="inputEmail-child"
+                  type="email"
+                  required
+                  name="userMail"
+                  autocomplete="on"
+                />
+                <img src="./assets/img/umschlag.png" alt="" />
+                <!--  </div> -->
+              </div>
+              <div id="inputPassword">
+                <!-- <div id="inputPassword-child"> -->
+                <input
+                  placeholder="Password"
+                  id="inputPassword-child"
+                  type="password"
+                  required
+                  name="userPassword"
+                  autocomplete="off"
+                />
+                <img src="./assets/img/sloss.png" alt="" />
+                <!-- </div> -->
+              </div>
+            </div>
+            <div id="login-content2">
+              <div id="remember-btn">
+                <input type="checkbox" id="remember" value="" />
+                <label id="remember-text" for="remember">Remember me</label>
+              </div>
+              <div> <a id="passwordForgotten" href="forgotpw.html">Forgot my password</a></div>
+              
+            </div>
+
+            <div id="login-content3">
+              <button id="login-btn">
+                <span id="login-btn-text">Log in</span>
+              </button>
+              <button onclick="guest(); return false;" id="login-guest">
+                <span class="login-guest-text">Guest log in</span>
+              </button>
+            </div>
+            <div class="hidden" id="msgBoxLogIn"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+     
+      <div id="signUp">
+          <span id="signUp-text">Not a Join user?</span>
+          <button onclick="location.href='signup.html'" id="signUp-btn">
+            <span id="signUp-btn-text">Sign up</span>
+          </button>
+      </div>
+       
+        
+    </div>
+   
+  </body>
+</html>

@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+    font-family: 'inter';
+    overflow-y: hidden;
+}
+
+.main {
+    height: 100vh;
+}
+
+.headline {
+    color: white;
+    margin-right: 20px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #4589FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left img{
+    margin-left: 40px;
+}
+
+.header-right{
+    align-items: center;
+    display: flex;
+    margin-right: 40px;
+}
+
+.header-profile{
+    border-radius: 100%;
+    border: 3px solid white;
+    margin-left: 20px;
+
+}
+
+.sidebar {
+    width: 230px;
+    background-color: white;
+    /* min-height: 89vh; */
+    height: 100vh;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid lightgrey;
+}
+
+.icons {
+    margin-top: 40px;
+}
+
+.icons img {
+    height: 22px;
+    width: 22px;
+    margin-right: 10px;
+}
+
+.icons-style {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+/* .trash-style{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+} */
+
+.icons-style a{
+    text-decoration: none;
+    color: black;
+}
+
+.icons-style:hover, .flex-items:hover{
+  background-color: #4589ff5c;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.legal-notice img {
+    margin-right: 10px;
+   
+}
+.legal-notice{
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.flex-items{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 125px;
+}
+
+/* .flex-items:hover{
+    background-color: #d2e3ff;
+    border-radius: 8px;
+    cursor: pointer;
+} */
+
+.flex-items a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: absolute;
+    right: 97px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 100px;
+    border-radius: 10px 0px 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    display: none;
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #myBtn{
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    display: none;
+    padding: 2px 16px;
+    background-color: #D2E3FF;
+    color: white;
+  }
+  
+  .modal-body {
+    cursor: pointer;
+    padding: 2px 16px;
+    text-align: center;
+  }
+
+  .modal-content:hover{
+    background-color: #D2E3FF;
+    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
+    
+  }
+  
+  .modal-footer {
+    display: none;
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+
+@media screen and (max-height: 915px) {
+
+    body{
+        overflow-y: scroll;
+    }
+}

@@ -1,0 +1,121 @@
+:root {
+  --primary: #4589ff;
+}
+body{
+  overflow-y: scroll!important;
+}
+h1,
+h2,
+h3 {
+  color: var(--primary);
+  width: 90%;
+}
+
+a{
+  display: contents;
+  word-break: break-all;
+}
+
+p{
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  align-items: center;
+}
+
+strong{
+  display: contents;
+}
+
+.legal-notice-content {
+  display: flex;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* height: 89vh; */
+}
+
+
+.header {
+  position: fixed;
+  z-index: 3;
+}
+
+
+.sidebar {
+  width: 230px;
+  position: fixed;
+  top: 100px;
+}
+
+
+.legal-notice-headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.legal-notice-headline img {
+  height: 20px;
+}
+
+.legal-notice {
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 85px;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  padding-left: 13px;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+}
+
+#footerLegal{
+  display: none;
+}
+
+#imprint{
+  margin-left: -200px;
+  bottom: 130px;
+
+}
+
+#legalNote{
+  margin-left: -200px;
+  bottom: 220px;
+
+}
+
+.flex-items {
+  position: absolute;
+}
+
+@media screen and (max-width: 1130px) {
+  .legal-notice-content {
+    
+    width: 100%;
+  }
+
+  #footerLegal{
+    display: block;
+}
+
+.legal-notice {
+  margin-left: unset;
+}
+
+
+  #regionLeft{
+    display: none;
+  }
+ 
+  }

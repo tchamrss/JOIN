@@ -1,0 +1,88 @@
+<img class="closebtn" onclick="closeNav()" src="./assets/img/closeX.png" alt="">
+<div id="createTask-overlay">
+   <span class="addTask-text-overlay">Add Task</span>
+     
+    
+</div>
+<div class="overlay-content">
+    <div class="addTask-board">
+    <form id="form_board"  onsubmit="addTask_board('${state}'); taskAddedToBord_board(); return false;">
+        <div class="left-box">
+            <!--Title-->
+
+                <input class="title-board" id="title" type="text" required placeholder="Enter a title">
+
+
+            <!--Select Contacts-->
+              
+            <div class="selectContacts">
+                <div class="input_select_contacts">
+                    <input id="selectContacts"  type="text" readonly="readonly" required placeholder="Select contacts to assign" >
+                    <img src="assets/img/dropdown_arrow.png" onclick="showContact_task()">
+                </div>
+        
+                <div id="selectAll2" class="selectAll" style="display: none"> </div> 
+                                  
+            </div>   
+
+            <!--Due Date-->
+
+                <span>Due date</span>
+                <div class="dueDate" onclick="showDate()"  >
+                <input id="dueDate" minlength="10" maxlength="10" type="date" required >
+                
+            </div>
+
+            <!--Category-->
+            
+                <span>Category</span>
+                <div class="selectContacts"   >
+                    <div class="input_select_contacts">
+                        <input id="categoryNew"  type="text" readonly="readonly" required placeholder="Select Task category" >
+                        <img src="assets/img/dropdown_arrow.png" onclick="showCategory()">
+                    </div>
+            
+                    <div id="categoryAll" class="selectAll"> </div> 
+            
+                    
+                </div>
+            
+            <!--Priority-->
+
+            <div class="priority">
+
+                <button id="button_prio_high" onclick="clickPriority ('high')" value="high" type="button"  class="b1">Urgent <img id="imgPrioHigh" src="assets/img/red_arrow.png"></button> 
+
+                <button id="button_prio_middle" onclick="clickPriority ('middle')" value="middle" type="button" class="b2">Medium <img id="imgPrioMiddle" src="assets/img/medium.png"></button>
+
+                <button id="button_prio_low" onclick="clickPriority ('low') " value="low" type="button"  class="b3">Low <img id="imgPrioLow" src="assets/img/green_arrow.png"></button>
+
+            </div>   
+             
+
+            <!--Description-->
+                
+                <span>Description</span>
+
+                <textarea required class="description"  type="text"
+                
+                id="description"  placeholder="Enter a description..">
+
+                </textarea>
+
+                <button class="createTask-btn" type="submit" value="Submit"> <span class="createTask-btn-text">Create task</span>  <img class="createTask-btn-img" src="./assets/img/checkOK.png" alt="">
+
+                </button>
+
+        </div>
+            <!--Add Task Button Confirm-->
+        
+
+        </div>
+        
+        
+        </form>
+
+        <div class="showCreateTask d-none" id="showCreateTask">Task added to board</div>
+</div>
+</div>

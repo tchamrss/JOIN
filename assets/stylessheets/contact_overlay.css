@@ -1,0 +1,220 @@
+:root {
+    --primary: #4589FF;
+}
+
+
+body {
+    margin: 0;
+    overflow-y: hidden;
+    /* width: 100%; */
+}
+
+h1 {
+    color: white;
+    font-family: 'inter';
+    text-align: center;
+}
+
+.overlay {
+    height: 100vh;
+    width: 35%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 0px 30px 30px 0px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: white;
+    /* transition: 0.5s; */
+    animation: mymoveRight 500ms; 
+    overflow-y: scroll;
+}
+
+@keyframes mymoveRight {
+    from {width: 0px;}
+    to {width: 35%;}
+  }
+
+
+.content {
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 0px 0px 0px;
+    background: var(--primary);
+    padding: 40px;
+}
+
+.contacts-edit {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contacts-img {
+    border-radius: 100%;
+    width: 18%;
+    margin-top: 20px;
+}
+
+ 
+.input-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 29px;
+    /* width: 292px; */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .input-name,
+  .input-email,
+  .input-phone {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 21px;
+    gap: 10px;
+    /* width: 295px; */
+    height: 49px;
+    background: #ffffff;
+    border-bottom: 1px solid #d1d1d1;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .input-name-child,
+  .input-email-child,
+  .input-phone-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 265px;
+    height: 23px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+span {
+    font-family: 'inter';
+    color: white;
+    text-align: left;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    
+}
+
+.btn-one {
+    background: #FFFFFF;
+    color: black;
+    border: 1px solid #647188;
+    border-radius: 10px;
+    width: 100px;
+    height: 42px;
+    margin: 20px;
+    font-family: 'inter';
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-two {
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: white;
+    border: unset;
+    width: 143px;
+    margin: 20px;
+    font-family: 'inter';
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+#closeContact{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 850px) {
+
+    .buttons {
+        padding: 0px;
+    }
+    .input-content {
+        width: unset;
+    }
+
+    .input-name, .input-email, .input-phone {
+        padding: 0px 0px; 
+        width: unset;
+
+    }
+
+  }
+
+  @media screen and (max-width: 950px) {
+    .overlay{
+        width: 50%;
+      }
+    }
+
+  @media screen and (max-width: 750px) {
+    .overlay{
+        width: 100%;
+      }
+    }
+
+  @media screen and (max-width: 320px) {
+
+    .input-name-child, .input-email-child, .input-phone-child {
+        width: unset;
+    }
+
+    .btn-one {
+        display: none;
+    }
+
+    .btn-two {
+        margin: 0px;
+        padding: 10px;
+    }
+
+    #closeContact{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 35px;
+    }
+
+  }
+
+    

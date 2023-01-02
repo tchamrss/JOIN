@@ -1,0 +1,711 @@
+body{
+    font-family: 'Inter';
+}
+
+#content{
+    background: #FFFFFF;
+    /* min-height: 100vh; */
+    height: calc( 100vh - 130px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-content{
+    display: none;
+    overflow-x: hidden;
+    flex-direction: column;
+    z-index: 5;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    gap: 23px;
+    overflow-y: scroll;
+    isolation: isolate;
+    position: relative;
+    width: 623px;
+    height: 800px;
+    background: #FFFFFF;
+    /* nuevo */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+   
+}
+
+.taskCardName{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 36.5px;
+    gap: 10px;
+    width: 170px;
+    height: 36px;
+    background: #FC71FF;
+    border-radius: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+}
+
+.taskCardName{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 4px;
+    gap: 10px;
+    width: 170px;
+    height: 36px;
+    background: #957796;
+    border-radius: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+}
+
+
+#taskCardName-child{
+    width: 155px;
+    height: 28px;
+    /* Version 2/t5 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    /* identical to box height, or 28px */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#taskCardTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1px;
+    width: 523px;
+    height: 146px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+#taskCardDescription{
+    width: 523px !important;
+    height: 146px;
+    /* Version 2/t1 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 120%;
+    /* or 73px */
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#taskCardText{
+    /* width: 518px; */
+    height: 50px;
+    /* Version 2/t6 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    justify-content: flex-start;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+}
+
+#taskDatecontent{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 0px;
+    gap: 25px;
+    width: 246px !important;
+    height: 25px !important;
+    /* Inside auto layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    z-index: 3;
+}
+
+#taskDatecontent-child{
+    width: 200px;
+    height: 25px;
+    /* Version 2/t6 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#taskPrioritycontent-child{
+    display: flex;
+}
+
+.taskFixText{
+    width: 99px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 25px */
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#taskPrioritycontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+    width: 99px;
+    height: 31px;
+    /* Inside auto layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    z-index: 4;
+}
+
+/* #taskPriorityText{
+    width: 134px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    /* black 
+    color: #000000;
+    /* Inside auto layout 
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+    z-index: 5;
+    
+} */
+
+.taskAssignedText{
+    width: 134px;
+    height: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    /* or 25px */
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+    z-index: 5;
+}
+
+.assignedUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+    width: 231px;
+    height: 45px;
+    /* Inside auto layout */
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+    z-index: 6;
+}
+
+.assignedUserName{
+    box-sizing: border-box;
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8px;
+    gap: 10px;
+    width: 45px;
+    height: 45px;
+    background: #9327FF;
+    /* white */
+    border: 2px solid #FFFFFF;
+    border-radius: 58px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.assignedUserName-child{
+    width: 22px;
+    height: 19px;
+    /* Version 2/body */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    /* or 19px */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.assignedUserNameText{
+    display: flex;/* selber hinzugefügt*/
+    width: 300px;
+    height: 25px;
+    /* Version 2/t6 */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 25px */
+    text-align: center;
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.high-color{
+    background-color: rgb(239, 174, 174);
+    height: 36px;
+}
+
+.middle-color{
+    background-color: rgb(247, 214, 148);
+    height: 36px;
+}
+
+.low-color{
+    background-color: rgb(203, 251, 203);
+    height: 36px;
+}
+
+.img-prio{
+    width: 15px;
+}
+
+/* #taskPrioritycontent-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 18px;
+    gap: 10px;
+    width: 125px;
+    height: 31px;
+    background: #FFD2D2;
+    /* nuevo 
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    /* Inside auto layout 
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+} */
+
+.taskPrioritytext{
+    width: 62px;
+    height: 23px;
+    /* Version 2/t6 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 120%;
+    /* identical to box height, or 23px */
+    /* black */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.taskPrioritytext-img{
+    width: 17px;
+height: 12px;
+
+transform: rotate(-180deg);
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0px; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0px; opacity:1}
+  }
+  
+  /* The Close Button */
+  .closebtn-modal {
+    position: absolute;
+    width: 21.65px;
+    height: 21.65px;
+    left: 637.31px;
+    top: 60px;
+  }
+  
+  .closebtn-modal:hover,
+  .closebtn-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .edit-btn{
+    cursor: pointer;
+    /* edit button v1 */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    left: 637.31px;
+    top: 660px;
+
+    /* Version 2/main color */
+
+    background: #4589FF;
+    border-radius: 10px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 10;
+    flex-grow: 0;
+    z-index: 10;
+  }
+
+  .saveEdit-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+    position: absolute;
+    border: unset;
+    width: 138px;
+    height: 51px;
+    right: 40px;
+    /* left: 510.31px; */
+    top: 715px;
+
+    /* Version 2/main color */
+
+    background: #4589FF;
+    border-radius: 10px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 10;
+    flex-grow: 0;
+    z-index: 10;
+
+  }
+
+  @media screen and (max-width:738px) {
+   /*  #board-body{
+        display: none;
+    }
+    #footerBoard{
+        display: none;
+    } */
+
+    #editCardBtn{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        order: 10;
+    }
+
+    .saveEdit-btn {
+        right: unset;
+        position: relative;
+        top: unset;
+    }
+
+    .taskFixText {
+        display: none;
+    }
+
+    #taskPrioritycontent {
+        width: 100%;
+    }
+
+    #taskPrioritycontent-child {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #task-content {
+        width: 100%;
+        height: 71vh;
+        overflow-x: hidden;
+    }
+
+    .closebtn-modal {
+        right: 40px;
+        left: unset;
+    }
+
+    .edit-btn {
+        right: 40px;
+        left: unset;
+    }
+    .taskCardName {
+        width: unset;
+    }
+    #taskCardName-child {
+        width: unset;
+    }
+
+    #taskCardTitle {
+        width: unset;
+    }
+
+    #taskCardDescription {
+        padding-top: 15px;
+        width: 100% !important;
+        word-break: break-word;
+    }
+  }
+
+  @media screen and (max-width:515px) {
+    #taskCardDescription {
+        font-size: 40px;
+        line-height: unset;
+    }
+   
+
+    .b1 {
+        padding: 0px 0px; 
+        width: 30%;
+        height: 40px;
+    }
+    .b1 img{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+    }
+
+    .b2 {
+        padding: 0px 0px; 
+        width: 30%;
+        height: 40px;
+    }
+    .b2 img{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+    }
+
+    .b3 {
+        padding: 0px 0px; 
+        width: 30%;
+        height: 40px;
+    }
+    .b3 img{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+    }
+
+   /*  .b1 {
+        font-size: 14px;
+        width: 100% !important;
+        box-shadow: unset;
+        background-color: white;
+    }
+    .b1 img{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+    }
+
+    .b2 {
+        font-size: 14px;
+        width: 100% !important;
+        box-shadow: unset;
+        background-color: white;
+    }
+    .b2 img{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+    }
+
+    .b3 {
+        font-size: 14px;
+        width: 100% !important;
+        box-shadow: unset;
+        background-color: white;
+    }
+    .b3 img{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+    } */
+
+  }
+
+  @media screen and (max-width:310px) {
+    #taskDatecontent-child {
+        width: unset;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .assignedUserNameText {
+        width: unset; 
+        font-size: 15px;
+    }
+
+    #taskCardDescription {
+        font-size: 30px;
+    }
+
+    .taskFixText {
+        align-items: center;
+        font-size: 17px;
+    }
+
+    .taskAssignedText {
+        font-size: 17px;
+    }
+
+    #taskCardName-child {
+        font-size: 15px;
+        align-items: center;
+    }
+
+    .taskCardName {
+        width: 20%;
+        justify-content: center;
+    }
+
+  }
+  
+/*   .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  } */

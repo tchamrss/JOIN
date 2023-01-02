@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fonts.css">
+    <link rel="stylesheet" href="./assets/stylessheets/forgotpw.css">
+    <script src="js/login.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <title>Forgot PW</title>
+</head>
+<body onload="init()">
+   
+    
+    <div id="login-content-fo">
+        <div><img id="join-logo-fo" src="./assets/img/join-logo-white.png" alt=""> </div>
+        
+        <div id="login-form-fo">
+                
+                <div id="login-title-fo">
+                    
+                    <span id="login-title-text-fo"> I forgot my password</span>
+                    <img onclick="location.href='login.html'" id="retour" src="./assets/img/pfeile_links.png" alt="">
+                    <img id="login-title-img-fo" src="./assets/img/underline.png" alt=""> 
+                </div>
+                <span id="forgot-text">Don't worry! We will send you an email with the instructions to reset your password.</span>
+                <form onsubmit="return isMailExisting();"  id="input-content-res" class="input-content-su" action="https://join.russell-tchamba.de/send_mail.php"
+                method="POST">
+                    <div class="input-content-su">                     
+                            <div id="inputEmail-su">  
+                                <input placeholder="Email" id="inputEmail-child-su" type="email" required name="userMail" autocomplete="on">
+                                <img  src="./assets/img/umschlag.png" alt="">                       
+                            </div>
+                    </div>            
+                        <div id="fo-content3">
+                            <button  type="submit" id="fo-btn" > <span id="fo-btn-text">Send me the email</span> </button>
+                        </div>
+                        <div class="hidden" id="msgBoxResetPW"> <span>Email not found</span> </div>
+                </form>        
+        </div>
+        
+    </div>
+    
+</body>
+</html>

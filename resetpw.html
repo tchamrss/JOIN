@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fonts.css">
+    <link rel="stylesheet" href="./assets/stylessheets/resetpw.css">
+    <!-- <link rel="stylesheet" href="./assets/stylessheets/login.css"> -->
+    <script src="js/login.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <title>Reset PW</title>
+</head>
+<body onload="loadEmail(); init()">
+   
+    
+    <div id="login-content-re">
+        <div><img id="join-logo-re" src="./assets/img/join-logo-white.png" alt=""> </div>
+        
+            <div id="login-form-re">
+                <img onclick="location.href='login.html'" id="retour" src="./assets/img/pfeile_links.png" alt="">
+                <div id="login-title-re">
+                    <span id="login-title-text-re"> Reset your password</span>
+                    <img id="login-title-img-re" src="./assets/img/underline.png" alt=""> 
+                </div>
+                <span id="reset-text">Change your account password here</span>
+                <form onsubmit="resetpw(); return false;" class="input-content-re" action="">
+                    <div class="input-content-re">                       
+                        <div id="inputPassword-re-1">
+                            <div class="inputPassword-child">
+                                <input placeholder="New Password" id="newPassword" class="inputPassword-child-re" type="password" required name="userPassword" autocomplete="on">
+                            </div>                                   
+                        </div>
+                        <div id="inputPassword-re-2">
+                            <div class="inputPassword-child">
+                                <input placeholder="Confirm password" id="confirmPassword" class="inputPassword-child-re" type="password" required name="userPassword" autocomplete="on">
+                            </div>                                   
+                        </div>
+                    </div>
+            
+                    <div id="re-content3">
+                        <button id="re-btn" > <span id="re-btn-text">Continue</span> </button>
+                    </div>
+                    <div class="hidden" id="msgBoxReset"> </div>
+                </form>       
+            </div>
+        
+    </div>
+    
+</body>
+</html>

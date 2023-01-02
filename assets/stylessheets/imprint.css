@@ -1,0 +1,49 @@
+:root {
+    --primary: #4589ff;
+}
+
+h1 {
+    color: var(--primary)
+}
+.imprint-content{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.imprint-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.imprint-headline {
+    color: var(--primary);
+    font-size: 62px;
+    font-weight: 600;
+}
+
+#footerPrint{
+    display: none;
+}
+
+@media screen and (max-width: 872px) {
+  
+    #regionLeft{
+      display: none;
+    }
+
+    #footerPrint{
+        display: block;
+    }
+   
+}
+
+@media screen and (max-width: 370px) {
+  
+    .imprint-headline {
+        font-size: 30px;
+    }
+   
+}

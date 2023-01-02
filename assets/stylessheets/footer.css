@@ -1,0 +1,82 @@
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #42526E;
+    height: 80px; 
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 10px 10px;
+    gap: 10px;
+    bottom: 0px;
+    position: fixed;
+}
+
+.imgSettings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.imgSettings:hover{
+    background-color: #D2E3FF;
+}
+
+.footerCategory{
+    text-align: center;
+    word-wrap: break-word;
+    
+}
+
+/* #summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#board{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#addTask{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.imgFooter{
+    padding: 1px;
+    gap: 10px;
+    width: 30px;
+    height: 30px;
+
+}

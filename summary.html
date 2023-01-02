@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/join_logo.png">
+    <link rel="stylesheet" href="assets/stylessheets/summary.css">
+    <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="./assets/stylessheets/footer.css">
+    <script src="js/scripte.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/desktop_template.js"></script>   
+    <script src="js/mini_backend.js"> </script>
+</head>
+<body onload="includeHTML();init_summary() ">
+    <!-- include Templates  -->
+    <div w3-include-html="./assets/templates/desktop_template.html"></div>
+
+
+    <div id="greeting">
+        <span id="greeting-child"> Good morning </span>
+    </div>
+
+    <div class="kanban">
+        <span class="kanban-child"> Kanban Project Management </span>
+    </div>
+    <div id="wrapper">
+        <div id="dashboard">
+       
+    </div>
+    </div>
+    
+    <div id="footerSummary" w3-include-html="footer.html"></div>
+    
+</body>
+</html>
